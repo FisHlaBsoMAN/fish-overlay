@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person" proxied="no">
+    <email>fishlabsoman@gmail.com</email>
+    <name>Petrov Anatoly</name>
+  </maintainer>
+  <longdescription>
+    TDLight Telegram Bot API is an actively enhanced fork of the original Bot API, featuring experimental user support, proxies, unlimited files size, and more.
+    The TDLight Telegram Bot API provides an HTTP API for creating Telegram Bots.
+  </longdescription>
+  <use>
+    <flag name="td">enable td submodule</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">tdlight-team/tdlight-telegram-bot-api</remote-id>
+  </upstream>
+</pkgmetadata>

@@ -1,0 +1,20 @@
+[Unit]
+Description=telegram_bot_api
+Wants=network.target
+After=network.target
+
+[Service]
+ReadWriteDirectories=/home/tgapi/telegram-bot-api/ /var/www/api2.javaw.ru/
+User=tgapi
+Group=nginx
+WorkingDirectory=/home/tgapi/telegram-bot-api/build/
+#StandardOutput=file:/home/fish/fwder/log.log
+#StandardError=file:/home/fish/fwder/log_err.log
+
+#Type=simple
+ExecStart=/home/tgapi/telegram-bot-api/build/telegram-bot-api --api-id=123456789  --api-hash=DEADDEADDEADDEADDEADDEAD  --http-port=8898 -d /var/www/api2.javaw.ru/file -t /var/www/api2.javaw.ru/temp -v 1 --http-ip-address=127.0.0.1
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=default.target
