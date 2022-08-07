@@ -5,7 +5,7 @@ EAPI=8
 
 inherit cmake systemd
 
-TD_COMMIT="782670c7dbf278e0ba07fc7e168f39ac154c7238"
+TD_COMMIT="b393215d6671863b6baf2a589d343cff9474f6ba"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
