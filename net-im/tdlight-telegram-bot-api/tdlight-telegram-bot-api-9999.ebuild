@@ -5,7 +5,7 @@ EAPI=8
 
 inherit cmake systemd
 
-TD_COMMIT="b393215d6671863b6baf2a589d343cff9474f6ba"
+TD_COMMIT="7eba19887ad834fd731b6b07b53c2426fe4beb59"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
@@ -62,7 +62,7 @@ src_install() {
 	cmake_src_install
 	insinto /usr/lib64/
 	# отвратительно. я не хочу так
-	doins ../${PN}-${PV}_build/td/libtdapi.so.1.8.4 
+	doins ../${PN}-${PV}_build/td/libtdapi.so.1.8.8
 	doins ../${PN}-${PV}_build/td/libtdapi.so 
 	systemd_dounit "${FILESDIR}"/tdlight-bot-api.service
 }
