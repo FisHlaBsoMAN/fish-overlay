@@ -62,7 +62,7 @@ src_install() {
 	cmake_src_install
 	insinto /usr/lib64/
 	# отвратительно. я не хочу так
-	doins ../${PN}-${PV}_build/td/libtdapi.so.1.8.11
+	doins ../${PN}-${PV}_build/td/libtdapi.so.1.8.14
 	doins ../${PN}-${PV}_build/td/libtdapi.so
 	systemd_dounit "${FILESDIR}"/tdlight-bot-api.service
 }
