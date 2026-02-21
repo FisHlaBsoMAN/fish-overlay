@@ -1,17 +1,16 @@
-API=8
+EAPI=8
 
 DESCRIPTION="Dummy package for installkernel"
 HOMEPAGE="https://wiki.gentoo.org/wiki/Custom_Kernel"
-S="${WORKDIR}"
 
 LICENSE="metapackage"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86" # Добавьте нужные архитектуры
+KEYWORDS="**"
 
-IUSE=""
-DEPEND=""
-RDEPEND=""
+S="${WORKDIR}"
 
-src_unpack() { :; }
-src_compile() { :; }
-src_install() { :; }
+src_install() {
+	insinto /usr/share/doc/${PF}
+	echo "installkernel fuck you" > "${T}/README.dummy"
+	doins "${T}/README.dummy"
+}
